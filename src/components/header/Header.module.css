@@ -1,0 +1,31 @@
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.3rem #0002;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.logo {
+}
+.search {
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.active {
+}
+.right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
