@@ -1,3 +1,7 @@
+# AboutAdd commentMore actions
+
+Design: https://dribbble.com/shots/14552329--Exploration-Task-Management-Dashboard
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

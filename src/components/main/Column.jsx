@@ -9,7 +9,7 @@ export function Column({title, tasks}) {
                 <BsThreeDots />
             </div>
             <div className={style.cardList}>
-                { tasks.map(id => <div className={style.card}>TASK {id}</div>) }
+                { tasks.map(task => <div key={task.id} className={style.card}>TASK {task.id}</div>) }
             </div>
             <div className={style.addTask}>
                 ADD TASK
