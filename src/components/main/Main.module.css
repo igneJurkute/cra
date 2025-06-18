@@ -34,9 +34,36 @@
 }
 
 .card {
+    display: grid;
+    gap: 1rem;
     padding: 1rem;
     background-color: #fff;
     border-radius: 1rem;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tag {
+    padding: 0.2rem 0.6rem;
+    line-height: 1rem;
+    background-color: pink;
+    border-radius: 0.7rem;
+}
+.cardBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trio {
+    display: flex;
+    gap: 1rem;
+}
+.info {
+    display: flex;
+    gap: 0.3rem;
 }
 
 .addTask {

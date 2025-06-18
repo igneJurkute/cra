@@ -115,9 +115,9 @@ function App() {
 
   return (
     <div className="App">
-      <Aside/>
       <Header/>
       <Main data={data} />
+      <Aside data={data} />
     </div>
   );
 }

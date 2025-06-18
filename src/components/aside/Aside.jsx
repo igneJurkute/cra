@@ -1,6 +1,6 @@
 import style from './Aside.module.css';
 
-export function Aside() {
+export function Aside({data}) {
     return (
         <aside>
             ASIDE CONTENT

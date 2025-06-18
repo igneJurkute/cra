@@ -1,5 +1,6 @@
 import { BsThreeDots } from 'react-icons/bs';
 import style from './Main.module.css';
+import { TaskCard } from './TaskCard';
 
 export function Column({title, tasks}) {
     return (
@@ -9,7 +10,7 @@ export function Column({title, tasks}) {
                 <BsThreeDots />
             </div>
             <div className={style.cardList}>
-                { tasks.map(task => <div key={task.id} className={style.card}>TASK {task.id}</div>) }
+                { tasks.map(taskObj => <TaskCard key={taskObj.id} data={taskObj} />) }
             </div>
             <div className={style.addTask}>
                 ADD TASK
