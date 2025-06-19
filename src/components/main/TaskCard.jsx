@@ -3,8 +3,13 @@ import { BiSolidMessage } from 'react-icons/bi';
 import { RiAttachment2 } from 'react-icons/ri';
 import style from './Main.module.css';
 
-export function TaskCard({data: {tag, task, dueDate}}) {
+export function TaskCard({data: {userId, tag, task, dueDate}, user}) {
     const date = 'Nov 24'; // <- dueDate new Date(dueDate)
+
+    let img = <img src={`./img/users/${user.img}`} alt='User' />;
+    if (typeof user.img !== 'string') {
+        img = user.img;
+    }
 
     return (
         <article className={style.card}>Add commentMore actions
@@ -28,7 +33,7 @@ export function TaskCard({data: {tag, task, dueDate}}) {
                         <p>5</p>
                     </div>
                 </div>
-                <img src='/' alt='User' />
+                {img}
             </footer>
         </article>
     );

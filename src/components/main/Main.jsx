@@ -2,7 +2,7 @@ import { BsPlusCircleDotted } from 'react-icons/bs';
 import style from './Main.module.css';
 import { Column } from './Column';
 
-export function Main({data}) {
+export function Main({tasksData, usersData}) {
     return (
         <main className={style.main}>
             <div className={style.header}>
@@ -14,10 +14,18 @@ export function Main({data}) {
                     <BsPlusCircleDotted size='1.6rem' />
                 </div>
             </div>
-           <Column title='Task ready' tasks={data.filter(item => item.stage === 'todo')} />
-            <Column title='In progress' tasks={data.filter(item => item.stage === 'progress')} />
-            <Column title='Needs review' tasks={data.filter(item => item.stage === 'review')} />
-            <Column title='Done' tasks={data.filter(item => item.stage === 'done')} />
+           <Column title='Task ready'
+                tasks={tasksData.filter(item => item.stage === 'todo')}
+                users={usersData} />
+            <Column title='In progress'
+                tasks={tasksData.filter(item => item.stage === 'progress')}
+                users={usersData} />
+            <Column title='Needs review'
+                tasks={tasksData.filter(item => item.stage === 'review')}
+                users={usersData} />
+            <Column title='Done'
+                tasks={tasksData.filter(item => item.stage === 'done')}
+                users={usersData} />
         </main>
     );
 }
