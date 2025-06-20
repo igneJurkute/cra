@@ -1,9 +1,11 @@
-import { BsThreeDots, BsFlagFill } from 'react-icons/bs';
+import { BsThreeDots, BsFlagFill, BsHeart, BsHeartFill } from 'react-icons/bs';
 import { BiSolidMessage } from 'react-icons/bi';
 import { RiAttachment2 } from 'react-icons/ri';
 import style from './Main.module.css';
+import { useState } from 'react';
 
 export function TaskCard({data: {userId, tag, task, dueDate}, user}) {
+    const [isLiked, setLike] = useState(false);
     const date = 'Nov 24'; // <- dueDate new Date(dueDate)
 
     let img = <img src={`./img/users/${user.img}`} alt='User' />;
@@ -11,10 +13,15 @@ export function TaskCard({data: {userId, tag, task, dueDate}, user}) {
         img = user.img;
     }
 
+    function updateLike() {
+        setLike(!isLiked);
+    }
+
     return (
         <article className={style.card}>Add commentMore actions
             <header className={style.cardTop}>
                 <p className={style.tag}>{tag}</p>
+                {isLiked ? <BsHeartFill onClick={updateLike} /> : <BsHeart onClick={updateLike} />}
                 <BsThreeDots />
             </header>
             <p>{task}</p>
